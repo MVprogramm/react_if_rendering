@@ -3,6 +3,8 @@ import React from 'react';
 import './auth.scss';
 
 import Greeting from './Greeting.jsx';
+import Login from './Login.jsx';
+import Logout from './Logout.jsx';
 
 class Auth extends React.Component {
   constructor(props) {
@@ -13,16 +15,16 @@ class Auth extends React.Component {
     }
   }
 
-  handleLogIn = () => {
-    this.setState({
-      isLoggedIn: true,
-    });
-  }
-
-  handleLogOut = () => {
-    this.setState({
-      isLoggedIn: false,
-    });
+  buttonHandler = (event) => {
+    if (event.target.classList.contains('login')) {
+      this.setState({
+        isLoggedIn: true,
+      });
+    } else {
+      this.setState({
+        isLoggedIn: false,
+      });
+    }
   }
 
   render() {
@@ -31,9 +33,12 @@ class Auth extends React.Component {
         <Greeting 
           isLoggedIn={this.state.isLoggedIn} 
         />
-        <div>
-          <button className='btn' onClick={this.handleLogIn}>Login</button>
-          <button className='btn' onClick={this.handleLogOut}>Logout</button>
+        <div onClick={this.buttonHandler}>
+          {
+            this.state.isLoggedIn
+              ? <Logout />
+              : <Login />
+          }
         </div>
       </div>
     )
