@@ -15,16 +15,16 @@ class Auth extends React.Component {
     }
   }
 
-  buttonHandler = (event) => {
-    if (event.target.classList.contains('login')) {
-      this.setState({
-        isLoggedIn: true,
-      });
-    } else {
-      this.setState({
-        isLoggedIn: false,
-      });
-    }
+  loginHandler = () => {
+    this.setState({
+      isLoggedIn: true,
+    });
+  }
+
+  logoutHandler = () => {
+    this.setState({
+      isLoggedIn: false,
+    });
   }
 
   render() {
@@ -33,11 +33,11 @@ class Auth extends React.Component {
         <Greeting 
           isLoggedIn={this.state.isLoggedIn} 
         />
-        <div onClick={this.buttonHandler}>
+        <div>
           {
             this.state.isLoggedIn
-              ? <Logout />
-              : <Login />
+              ? <Logout onLogout={this.logoutHandler} />
+              : <Login onLogin={this.loginHandler} />
           }
         </div>
       </div>
