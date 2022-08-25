@@ -1,23 +1,38 @@
 {
-  "name": "react_if_login",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "name": "react-jest",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server -d --devtool eval-source-maps --open",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "babel-jest": "^28.1.3",
+    "core-js": "^3.5.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.1.2"
+  },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.12.1",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.3.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.3",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "sass": "^1.23.7",
@@ -27,10 +42,7 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
-  "dependencies": {
-    "core-js": "^3.5.0",
-    "moment": "^2.29.3",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }
