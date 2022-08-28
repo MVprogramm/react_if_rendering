@@ -1,5 +1,4 @@
 import React from "react";
-import "./auth.scss";
 import Greeting from "./features/greeting/Greeting.jsx";
 import Login from "./features/login/Login.jsx";
 import Logout from "./features/logout/Logout.jsx";

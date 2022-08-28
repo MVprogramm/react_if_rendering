@@ -1,5 +1,4 @@
 import React from "react";
-import "./logout.scss";
 
 const Logout = ({ onLogout }) => {
   return (

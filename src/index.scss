@@ -12,3 +12,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+@import url("./auth.scss");
+@import url("./features/login/login.scss");
+@import url("./features/logout/logout.scss");

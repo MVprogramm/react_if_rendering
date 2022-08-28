@@ -1,5 +1,4 @@
 import React from "react";
-import "./login.scss";
 
 const Login = ({ onLogin }) => {
   return (
